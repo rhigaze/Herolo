@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-  private url = "http://www.omdbapi.com/";
+  private url = "https://www.omdbapi.com/";
   private apikey = "3c1baca1"; 
   private movies: any[] = [];
   private moviesUpdated = new Subject<any[]>();
