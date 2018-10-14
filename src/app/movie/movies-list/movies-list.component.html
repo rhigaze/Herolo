@@ -1,0 +1,20 @@
+<div class="main" >
+  <a class="add-button-area" (click)="addMovie()"><span>New movie</span></a>
+  <div class="container" fxLayout="row" fxLayoutAlign="left" fxLayoutGap="0.25%">
+    <mat-card class="card-picture" *ngFor="let movie of movies"   fxFlexAlign="stretch" @fadeIn>
+      <mat-card-header></mat-card-header>
+      <img mat-card-image  [src]="movie.Poster" [matTooltip]="movie.Title"> 
+      <mat-card-content >
+        <mat-card-title ><h5>{{movie.Title  | titlecase| title}}</h5></mat-card-title> 
+        <mat-divider style="width:82%;left:auto;margin: -5% 0%"></mat-divider>
+        <span mat-card-actions>
+          <span fxFlex="33%"> Type: {{movie.Type}}</span>
+          <span fxFlex="35%"> </span>
+          <span fxFlex="32%">Year: {{movie.Year}} </span>
+          <a (click)="editMovie(movie.imdbID)"><mat-icon fxFlex="10%">mode_edit</mat-icon></a>
+          <a (click)="deleteMovie(movie.imdbID)"><mat-icon fxFlex="10%">delete</mat-icon></a>
+        </span>
+      </mat-card-content> 
+    </mat-card> 
+  </div>   
+</div>

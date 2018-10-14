@@ -1,0 +1,13 @@
+.header {
+    position: relative; 
+}
+.header button[mat-dialog-close] {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+.mat-dialog-title{ 
+  font-size: 34px;
+  font-family: initial; 
+  margin: 20px;
+}

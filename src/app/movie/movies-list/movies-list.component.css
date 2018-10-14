@@ -1,0 +1,45 @@
+.main{
+  margin-top: 50px;
+  overflow: auto;
+}
+.card-picture {
+  width: 25%;
+  max-height: 30%;
+  margin: 1.5%;  
+} 
+.mat-card-image {
+  width: 100%;
+  margin: auto;
+}
+.mat-card-actions{
+  margin-bottom: 1%;  
+}
+.mat-divider{
+    width:80%;
+    margin:auto;
+}
+.container{ 
+    flex-wrap: wrap;
+}
+.over{
+  opacity: 0.3;
+  width: 27%;
+  max-height: 31%;
+  margin: 1.5%;
+} 
+.add-button-area{
+    right: 0;
+    top: 25%;
+    position: fixed;
+    background: #49226f;
+    padding: 5px;
+    width: 7%;
+    height: 7%; 
+    border-radius: 13px 0px 0px 15px;
+}
+.add-button-area span{
+    color: #ffffff;
+    font-size: 17px;
+    font-family: cursive;
+    padding-top: 4px;
+}

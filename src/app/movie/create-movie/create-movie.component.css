@@ -1,0 +1,45 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 3% 1%;
+}
+.header {
+    position: relative; 
+}
+.header button[mat-dialog-close] {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+.example-full-width {
+  width: 100%;
+}
+.mat-radio-button{
+  padding: 0px 5px;
+}
+.pic{
+  width: 200px;
+  margin: 5px;
+}
+.mat-error {
+    display: block;
+    margin-bottom: 22px;
+    margin-top: -18px;
+}
+.mat-stroked-button{
+  margin: 0 9px;
+  width: 217px;
+  border-radius: 37px;
+}
+.mat-dialog-title{
+  text-align: -webkit-center;
+  font-size: 34px;
+  font-family: initial;
+  color: #49226f;
+  margin: 20px;
+}
+.dialog-container{
+  border-radius: 38px;
+  padding: 30px;
+}

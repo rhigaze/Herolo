@@ -1,0 +1,59 @@
+
+<div class="header">
+  <button mat-dialog-close  mat-icon-button>
+    <mat-icon>close</mat-icon>
+  </button> 
+  <h1 mat-dialog-title>{{mode + ' Movie' | titlecase}}</h1>
+</div>
+<form class="example-form" [formGroup]="movieForm" (ngSubmit)="save()">
+  
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Movie Title" formControlName="title" name="title" [(ngModel)]="movieObj.Title">
+  </mat-form-field> 
+  <div *ngIf="f.title.errors && (f.title.dirty || f.title.touched)">
+    <mat-error *ngIf="f.title.errors.required">
+      Title for movie is <strong>required</strong>
+    </mat-error> 
+    <mat-error *ngIf="f.title.errors.titleIsExist">This email has been taken, please use another one.</mat-error>
+  </div> 
+
+ 
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker"  placeholder="Year" formControlName="year" name="year" [(ngModel)]="movieObj.Year">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+  </mat-form-field>
+  <div *ngIf="f.year.errors&& (f.year.dirty || f.year.touched)">
+    <mat-error *ngIf="f.year.errors.required">
+      Year for movie is <strong>Invalid </strong> choose right date
+    </mat-error> 
+    <mat-error *ngIf="f.year.errors.dateInvalid">This date is invalid.</mat-error>
+
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Gentre" formControlName="genre" name="genre" [(ngModel)]="movieObj.Type"> 
+  </mat-form-field>
+   <div *ngIf="f.genre.errors && (f.genre.dirty || f.genre.touched)">
+    <mat-error *ngIf="f.genre.errors.required">
+      Gentre of movie is <strong>required</strong>
+    </mat-error> 
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Poster link" formControlName="poster" name="poster" [(ngModel)]="movieObj.Poster"> 
+  </mat-form-field>
+  <div *ngIf="f.poster.errors && (f.poster.dirty || f.poster.touched)">
+    <mat-error *ngIf="f.poster.errors.required">
+      Poster for movie is <strong>required</strong>
+    </mat-error> 
+  </div>
+  <img class="pic" *ngIf="movieObj.Poster"  [src]="movieObj.Poster"> 
+  
+ <mat-dialog-actions align="end">
+   <button  type="submit" [disabled]="movieForm.invalid" mat-stroked-button color="primary">Save</button>
+  
+   <button mat-stroked-button mat-dialog-close>cancel</button> 
+  </mat-dialog-actions>
+</form>  

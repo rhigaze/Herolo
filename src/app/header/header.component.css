@@ -1,0 +1,15 @@
+.logo-area{
+    background: white;
+    padding: 12px 0px 0px 12px;
+    margin-top: 3rem;
+    border: solid #c1c1c1 3px;
+    border-radius: 16px 15px;
+}
+.logo-img{
+    width: 60%;
+}
+.mat-toolbar-row{
+    height: 100px;
+    background: rebeccapurple;
+    border-radius: 0 0 10px 10x;
+}
